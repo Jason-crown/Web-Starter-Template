@@ -1,0 +1,349 @@
+/* =========================
+   1. BASE STYLES
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #fff;
+
+    --background: #fff;
+    --surface: #f7f7f7;
+    --text: #222;
+    --muted: #666;
+    --accent: #333;
+    --border: #ddd;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.2s, color 0.2s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================
+   2. LIGHT AND DARK THEMES
+========================= */
+
+body.light-theme {
+    --background: #fff;
+    --surface: #f7f7f7;
+    --text: #222;
+    --muted: #666;
+    --accent: #333;
+    --border: #ddd;
+}
+
+body:not(.light-theme) {
+    --background: #fff;
+    --surface: #f7f7f7;
+    --text: #222;
+    --muted: #666;
+    --accent: #333;
+    --border: #ddd;
+}
+
+/* =========================
+   3. NAVIGATION
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar nav a {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.navbar nav a:hover {
+    color: var(--text);
+}
+
+.theme-button {
+    padding: 7px 12px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.theme-button:hover {
+    background: var(--surface);
+}
+
+/* =========================
+   4. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--muted);
+}
+
+.hero p {
+    max-width: 550px;
+    margin: 0 auto;
+    color: var(--muted);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* =========================
+   5. BUTTONS
+========================= */
+
+.button {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.button.primary {
+    background: #222;
+    color: #fff;
+    border-color: #222;
+}
+
+.button.primary:hover {
+    background: #444;
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--text);
+}
+
+.button.secondary:hover {
+    background: var(--surface);
+}
+
+/* =========================
+   6. GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 60px 8%;
+}
+
+.section-heading {
+    max-width: 600px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* =========================
+   7. FEATURE CARDS
+========================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.feature-icon {
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   8. COUNTER
+========================= */
+
+.about {
+    background: var(--background);
+}
+
+.counter-card {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.counter-label {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+#count {
+    display: block;
+    margin: 12px 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.counter-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+.footer {
+    padding: 20px 8%;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+/* =========================
+   10. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px 5%;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 50px 5%;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 0.85rem;
+    }
+
+    .counter-actions {
+        gap: 5px;
+    }
+}

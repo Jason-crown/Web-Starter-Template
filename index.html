@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="A modern web development starter template.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern web development starter template.">
 
     <title>Web Starter | Home</title>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- Navigation -->
     <header class="navbar">
-        <a href="#" class="logo">Web<span>Starter.</span></a>
+        <a href="#home" class="logo">
+            Web<span>Starter.</span>
+        </a>
 
         <nav aria-label="Main navigation">
             <a href="#home">Home</a>
@@ -22,19 +25,29 @@
             <a href="#about">About</a>
         </nav>
 
-        <button id="theme-toggle"
-                class="theme-button"
-                aria-label="Toggle dark mode">
-            ☀️
+        <button
+            id="theme-toggle"
+            class="theme-button"
+            type="button"
+            aria-label="Switch to light mode">
+            Light Mode
         </button>
     </header>
 
+    <!-- Main Content -->
     <main>
+
+        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <span class="eyebrow">YOUR NEXT PROJECT STARTS HERE</span>
+                <span class="eyebrow">
+                    YOUR NEXT PROJECT STARTS HERE
+                </span>
 
-                <h1>Build something <span>amazing.</span></h1>
+                <h1>
+                    Build something
+                    <span>amazing.</span>
+                </h1>
 
                 <p>
                     A modern, responsive starter template
@@ -46,6 +59,7 @@
                     <a href="#features" class="button primary">
                         Explore Features
                     </a>
+
                     <a href="#about" class="button secondary">
                         Learn More
                     </a>
@@ -53,17 +67,27 @@
             </div>
         </section>
 
+        <!-- Features Section -->
         <section id="features" class="section">
             <div class="section-heading">
                 <span class="eyebrow">GET STARTED</span>
+
                 <h2>Everything you need to begin</h2>
-                <p>A simple foundation for your future projects.</p>
+
+                <p>
+                    A simple foundation for your future projects.
+                </p>
             </div>
 
             <div class="feature-grid">
+
                 <article class="feature-card">
-                    <div class="feature-icon">🌐</div>
+                    <div class="feature-icon" aria-hidden="true">
+                        &lt;/&gt;
+                    </div>
+
                     <h3>HTML Structure</h3>
+
                     <p>
                         Organize your content using semantic
                         HTML and accessible elements.
@@ -71,8 +95,12 @@
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                    <div class="feature-icon" aria-hidden="true">
+                        #
+                    </div>
+
                     <h3>Modern CSS</h3>
+
                     <p>
                         Create responsive layouts, reusable
                         styles, and polished interfaces.
@@ -80,20 +108,28 @@
                 </article>
 
                 <article class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon" aria-hidden="true">
+                        JS
+                    </div>
+
                     <h3>JavaScript</h3>
+
                     <p>
                         Add interactivity, manipulate the DOM,
                         and build dynamic features.
                     </p>
                 </article>
+
             </div>
         </section>
 
+        <!-- About / Interactive Demo -->
         <section id="about" class="section about">
             <div class="section-heading">
                 <span class="eyebrow">INTERACTIVE DEMO</span>
+
                 <h2>Your first JavaScript component</h2>
+
                 <p>
                     Try the counter below. This component
                     is powered by JavaScript.
@@ -102,25 +138,45 @@
 
             <div class="counter-card">
                 <p class="counter-label">CURRENT COUNT</p>
+
                 <output id="count" aria-live="polite">0</output>
 
                 <div class="counter-actions">
-                    <button id="decrement" class="button secondary">
-                        −
+                    <button
+                        id="decrement"
+                        class="button secondary"
+                        type="button"
+                        aria-label="Decrease counter">
+                        -
                     </button>
-                    <button id="reset" class="button secondary">
+
+                    <button
+                        id="reset"
+                        class="button secondary"
+                        type="button">
                         Reset
                     </button>
-                    <button id="increment" class="button primary">
+
+                    <button
+                        id="increment"
+                        class="button primary"
+                        type="button"
+                        aria-label="Increase counter">
                         +
                     </button>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p>© 2026 Web Starter. Built with HTML, CSS & JavaScript.</p>
+        <p>
+            &copy; 2026 Web Starter.
+            Built with HTML, CSS &amp; JavaScript.
+        </p>
     </footer>
+
 </body>
 </html>
